@@ -1,0 +1,13 @@
+---
+- name: Basic host health checks
+  hosts: linux
+  gather_facts: true
+  become: false
+  tasks:
+    - name: Show host identity
+      ansible.builtin.debug:
+        msg:
+          - "Host: {{ inventory_hostname }}"
+          - "OS: {{ ansible_facts.distribution }} {{ ansible_facts.distribution_version }}"
+          - "Kernel: {{ ansible_facts.kernel }}"
+          - "Memory MB: {{ ansible_facts.memtotal_mb }}"

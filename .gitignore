@@ -1,0 +1,30 @@
+# Rust
+/target
+**/*.rs.bk
+
+# Node
+node_modules/
+dist/
+
+# Local env/secrets
+.env
+.env.*
+!.env.example
+secrets/
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+*.swp
+
+# Local state / generated data
+data/
+logs/
+*.tfstate
+
+# Proxmox / lab-specific local files
+*.pem
+*.key
+*.crt
+inventory.local.yml

@@ -1,0 +1,15 @@
+---
+- name: Prepare a patch discovery report
+  hosts: linux
+  gather_facts: true
+  become: true
+  tasks:
+    - name: Refresh apt metadata on Debian-family systems
+      ansible.builtin.apt:
+        update_cache: true
+        cache_valid_time: 3600
+      when: ansible_facts.os_family == 'Debian'
+
+    - name: Show a safe patching reminder
+      ansible.builtin.debug:
+        msg: "Discovery only. Do not apply production patches from this playbook."

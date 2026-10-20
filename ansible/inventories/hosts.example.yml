@@ -1,0 +1,12 @@
+all:
+  children:
+    linux:
+      hosts:
+        acc-app01:
+        prod-app01:
+    monitoring:
+      hosts:
+        monitor01:
+    windows:
+      hosts:
+        prod-win01:

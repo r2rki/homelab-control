@@ -1,0 +1,2 @@
+// Example only. Add real discovery and log pipelines once the host/container layout is known.
+// Keep credentials and external endpoints out of Git.

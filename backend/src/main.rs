@@ -1,7 +1,3 @@
-use axum::{
-    routing::get,
-    Router,
-};
 use tower_http::{cors::CorsLayer, trace::TraceLayer};
 use tracing_subscriber::EnvFilter;
 
@@ -24,6 +20,7 @@ async fn main() {
         .expect("failed to bind API listener");
 
     tracing::info!(address = %bind_addr, "homelab control API started");
+
     axum::serve(listener, app)
         .with_graceful_shutdown(shutdown_signal())
         .await

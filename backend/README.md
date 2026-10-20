@@ -1,18 +1,19 @@
-# Rust Control API
+# Backend
 
-Initial Rust/Axum scaffold for the homelab control plane.
+Rust API built with Axum and Tokio.
 
-## Endpoints
+## Current endpoints
 
 - `GET /health`
 - `GET /api/v1`
 
-## Build
+The API is intentionally small in Phase 0/1. Service integrations will be added behind the API layer rather than exposing third-party credentials to the web client.
+
+## Local development
 
 ```bash
-cargo check
-cargo test
+cargo fmt --all
+cargo check --all-targets
+cargo test --all-targets
 cargo run
 ```
-
-The API is intentionally small at this stage. Service adapters, authentication, policy enforcement and persistence will be introduced only after the infrastructure baseline is stable.

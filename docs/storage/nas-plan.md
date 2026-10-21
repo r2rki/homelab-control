@@ -24,3 +24,15 @@ Before committing to a pool:
 ## Rule
 
 RAID/ZFS redundancy is not a backup strategy by itself. At least one independent recovery path must exist.
+
+## Network
+
+The NAS will use the dedicated Storage network when VLAN support is implemented.
+
+Storage access should be limited to systems that require it, including Proxmox and selected application workloads.
+
+## Future expansion
+
+The NAS should remain independent of the Proxmox compute host and support future expansion to a second Proxmox host with ZFS replication.
+
+The NAS is a backup and storage component, not a replacement for independent backups.

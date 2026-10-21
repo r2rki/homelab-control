@@ -2,7 +2,7 @@
 
 ## Host roles
 
-One physical Proxmox host runs logical environments:
+One physical Proxmox host runs the following logical environments:
 
 - Production
 - Acceptance
@@ -27,9 +27,3 @@ acc-app01
 monitor01
 control01
 ```
-
-Use a consistent naming convention once the network is finalized.
-
-## Future replication
-
-A future `pve02` can receive selected VM replication from `pve01` using ZFS-backed storage, enabling a controlled recovery workflow.

@@ -8,7 +8,7 @@ One physical Proxmox host plus a separate NAS located near the network equipment
 
 - **Production**: services intended to be stable and usable
 - **Acceptance**: test/canary environment used before production changes
-- **Shared**: monitoring, control-plane and utility workloads where appropriate
+- **Shared**: monitoring, control plane and utility workloads where appropriate
 
 ## Design goals
 
